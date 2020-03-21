@@ -1,0 +1,28 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": "58",
+          "ie": "11"
+        }
+      }
+    ],
+    ["@babel/preset-react"]
+  ],
+  "plugins": [
+    [
+      "module-resolver", {
+        "root": ["./src"],
+        "alias": {
+          "@Components": "./src/Components",
+          "@Context": "./src/Context",
+          "@Reducer": "./src/Reducer",
+          "@Styles": "./src/Styles",
+          "@Ui": "./src/Ui"
+        }
+      }
+    ]
+  ]
+}

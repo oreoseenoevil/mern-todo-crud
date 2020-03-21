@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.boxTodo {
+  height: 100%;
+  padding: 1.2em 1.5em 1.2em 1.5em;
+  line-height: 1.2em;
+  flex-direction: column;
+  overflow-y: hidden;
+  overflow: auto;
+}
+
+.boxTodo::-webkit-scrollbar {
+  width: 2px;
+}
+.boxTodo::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 2px;
+}
+.boxTodo::-webkit-scrollbar-thumb:hover {
+  background: #444; 
+}
