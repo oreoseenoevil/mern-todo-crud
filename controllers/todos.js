@@ -1,7 +1,7 @@
 const Todo = require('../models/Todo')
 
 // Get all Todos
-exports.getTodos = async (req, res, next) => {
+exports.getTodos = async (req, res) => {
   try {
     const todos = await Todo.find()
 
@@ -19,7 +19,7 @@ exports.getTodos = async (req, res, next) => {
 }
 
 // Get Todo
-exports.getTodo = async (req, res, next) => {
+exports.getTodo = async (req, res) => {
   try {
     const todo = await Todo.findById(req.params.id, req.body)
 
@@ -44,7 +44,7 @@ exports.getTodo = async (req, res, next) => {
 
 
 // Create new Todo
-exports.addTodo = async (req, res, next) => {
+exports.addTodo = async (req, res) => {
   try {
     const todo = await Todo.create(req.body)
 
@@ -70,7 +70,7 @@ exports.addTodo = async (req, res, next) => {
 }
 
 // Update Todo
-exports.updateTodo = async (req, res, next) => {
+exports.updateTodo = async (req, res) => {
   try {
     const todo = await Todo.findByIdAndUpdate(req.params.id, req.body)
 
@@ -104,7 +104,7 @@ exports.updateTodo = async (req, res, next) => {
 }
 
 // Delete Todo
-exports.deleteTodo = async (req, res, next) => {
+exports.deleteTodo = async (req, res) => {
   try {
     const todo = await Todo.findByIdAndDelete(req.params.id)
 

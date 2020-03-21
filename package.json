@@ -11,13 +11,20 @@
   "author": "Jessie Tarrosa",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.3",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "nodemailer": "^6.4.6",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
     "nodemon": "^2.0.2"
   },
   "description": "CRUD Todo App",
