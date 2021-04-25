@@ -1,10 +1,13 @@
 {
   "env": {
     "browser": true,
-    "es6": true,
+    "es2021": true,
     "node": true
   },
-  "extends": "plugin:react/recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -13,13 +16,11 @@
     "ecmaFeatures": {
         "jsx": true
     },
-    "ecmaVersion": 2018,
+    "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "parser": "babel-eslint",
   "plugins": [
-    "react",
-    "react-hooks"
+    "react"
   ],
   "rules": {
     "camelcase": ["error", { "properties": "never" }],
@@ -45,8 +46,8 @@
       "ignoredNodes": ["TemplateLiteral *"]
     }],
     "react/prop-types": 0,
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "quotes": [
       "error",
       "single"
@@ -54,6 +55,7 @@
     "semi": [
       "error",
       "never"
-    ]
+    ],
+    "no-undef":"error"
   }
 }
