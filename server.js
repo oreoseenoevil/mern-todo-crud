@@ -9,6 +9,7 @@ dotenv.config({ path: './config/config.env' })
 connectDB()
 
 const todos = require('./routes/todos')
+const users = require('./routes/users')
 
 const app = express()
 
@@ -19,6 +20,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use('/api/todos', todos)
+app.use('/api/users', users)
 
 const PORT = process.env.PORT || 5000
 
