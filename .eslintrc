@@ -1,18 +1,27 @@
 {
   "env": {
     "browser": true,
-    "commonjs": true,
-    "es6": true,
+    "es2021": true,
     "node": true
   },
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
-    "ecmaVersion": 2018
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
   },
+  "plugins": [
+    "react"
+  ],
   "rules": {
     "camelcase": ["error", { "properties": "never" }],
     "comma-spacing": ["error", { "before": false, "after": true }],
@@ -36,6 +45,9 @@
       "ignoreComments": false,
       "ignoredNodes": ["TemplateLiteral *"]
     }],
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "quotes": [
       "error",
       "single"
@@ -43,6 +55,7 @@
     "semi": [
       "error",
       "never"
-    ]
+    ],
+    "no-undef":"error"
   }
 }
